@@ -9,6 +9,8 @@ Requires
 # State
 This is nothing more than a proof of concept. It is pretty janky and needs a lot of work to be a dependable mod.
 
+I am presenting it here now as I don't know when I'll get round to doing it and maybe someone else can tidy it up and issue a PR or just fork it.
+
 # How to
 
 1. Install into SauceMods folder in your $HOME/Documents/ directory.
@@ -24,7 +26,7 @@ This is nothing more than a proof of concept. It is pretty janky and needs a lot
 
 # How it works
 
-The page run on the 2nd device connects to the bike, reads the status messages and sends them to your own athlete data stream in Sauce. 
+The page run on the 2nd device connects to the bike, reads the status messages and sends them to your own athlete data stream in Sauce.
 
 The fields KICKRgear will contain "cr" and "gr" fields - Chain ring (front) and gear ring (rear)
 There should also be additional fields KICKRbrake with "side", "down" and "latch" which should trigger on brake lever action.
