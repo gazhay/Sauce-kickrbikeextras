@@ -1,0 +1,58 @@
+@font-face {
+  font-family: screenone;
+  src        : url(RussoOne-Regular.ttf);
+}
+html, body {
+    font-family : screenone, Helvetica, sans-serif;
+    padding     : 0; margin:0;
+    background  : #225071;
+    color       : #a1b8c5;
+
+}
+button {
+    font-size : 2em;
+}
+.conencting {
+    background : rgba(0,0,0,0.5);
+    color      : white;
+    pointer-events: none;
+}
+.connected {
+    background : #26a269;
+}
+.disconnected{
+    background : #fc2b58;
+}
+.default{
+
+}
+video{
+    width  : 100px;
+    height : 100px;
+}
+.status{
+    padding   : 10px;
+    font-size : 2em;
+    width     : 100vw;
+    color     : #ea7035;
+}
+.content{
+    width   : 100vw;
+    padding : 5vw;
+}
+.content * {
+    /* border : 1px solid black; */
+}
+#start{
+    width : 45%;
+}
+.gearing {
+    display    : inline-block;
+    width      : 45%;
+    text-align : center;
+}
+.gearing span{
+    padding-left  : 10px;
+    padding-right : 10px;
+    font-size     : 2em;
+}

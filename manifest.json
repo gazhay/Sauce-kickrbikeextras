@@ -1,0 +1,44 @@
+{
+    "manifest_version": 1,
+    "name"            : "KickrIntegration mod",
+    "description"     : "Injecting stolen gear information since 2023",
+    "author"          : "Gareth Hay",
+    "website_url"     : "https://gazhay.com",
+    "version"         : "0.0.1",
+    "web_root"        : "pages",
+    "windows"         : [{
+        "file"          : "pages/sender.html",
+        "query"         : {
+            "foo": "bar"
+        },
+        "id"            : "kickr-gears",
+        "name"          : "Kickr Gears",
+        "description"   : "Window to run on another device via https",
+        "always_visible": false,
+        "overlay"       : true,
+        "frame"         : true,
+        "default_bounds": {
+            "width" : 0.5,
+            "height": 500,
+            "x"     : 100,
+            "y"     : -100
+        }
+    },{
+        "file"          : "pages/test.html",
+        "query"         : {
+            "foo": "bar"
+        },
+        "id"            : "kickr-gears-display",
+        "name"          : "Kickr Gears Display",
+        "description"   : "Quick test display page",
+        "always_visible": false,
+        "overlay"       : true,
+        "frame"         : true,
+        "default_bounds": {
+            "width" : 0.5,
+            "height": 200,
+            "x"     : 100,
+            "y"     : -100
+        }
+    }]
+}

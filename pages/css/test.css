@@ -1,0 +1,52 @@
+@font-face {
+  font-family: screenone;
+  src        : url(RussoOne-Regular.ttf);
+}
+
+html[data-theme="kickrgears"] {
+    font-family                    : screenone;
+
+    --theme-base-color             : rgba(133, 204, 202,1);
+
+    --theme-fg-light               : 10%;
+    --theme-fg-shade-dir           : 1;
+
+    --theme-bookend-hue            : 10;
+    --theme-bookend-sat            : 100%;
+    --theme-bookend-light          : 30%;
+
+    --theme-bg-hue                 : 118;
+
+    --theme-bg2-hue                : 148;
+    --theme-bg2-sat                : 98%;
+    --theme-bg2-light              : 69%;
+
+    --theme-following-hue          : 0;
+    --theme-following-sat          : 100%;
+    --theme-following-light        : 40%;
+    --theme-following-shade-dir    : 1;
+
+    --theme-primary-hue            : 235;
+
+    --theme-button-bar-top-left    : rgba(123, 194, 192,1);
+    --theme-button-bar-bottom-right: rgba(103, 174, 197,1);
+}
+
+.content{
+    background-color : var(--theme-base-color);
+    font-family      : screenone, Helvetica, sans-serif;
+    text-align       : center;
+    font-size        : 5em;
+    width            : 300px;
+    height           : 200px;
+}
+.content div{
+    display : inline-block;
+    color   : var(--theme-button-bar-bottom-right);
+}
+.digit {
+}
+.divider {
+    padding-left  : 5px;
+    padding-right : 5px;
+}

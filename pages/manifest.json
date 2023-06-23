@@ -1,0 +1,16 @@
+{
+  "background_color": "#225071",
+  "description": "Kickr Gear fowarding for sauce & zudio",
+  "display_override": ["standalone", "minimal-ui"],
+  "display": "fullscreen",
+  "icons": [
+    {
+      "src": "images/icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "name": "Kickr Helper",
+  "short_name": "KICKR Helper",
+  "start_url": "sender.html"
+}

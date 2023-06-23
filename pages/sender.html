@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>KICKR Interface Helper</title>
+        <link rel="manifest" href="manifest.json" />
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+        <style media="screen">
+            @font-face {
+              font-family: screenone;
+              src        : url(css/RussoOne-Regular.ttf);
+            }
+            html, body {
+                font-family : screenone, Helvetica, sans-serif;
+                padding     : 0; margin:0;
+                background  : #225071;
+                color       : #a1b8c5;
+                width       : 100vw;
+                height      : 100vh;
+                overflow    : hidden;
+            }
+            .content{
+                display       : flex;
+                flex-direction: column;
+                height        : 180px;
+                overflow      : hidden;
+            }
+            .row{
+                display       : flex;
+                flex-direction: row;
+                justify-content: space-around;
+            }
+            .row > * {
+                flex-grow: 1;
+            }
+            button {
+                font-size : 1.5em;
+                margin : 10px;
+            }
+            .conencting {
+                background : rgba(0,0,0,0.5);
+                color      : white;
+                pointer-events: none;
+            }
+            .connected   { background : #26a269; }
+            .disconnected{ background : #fc2b58; }
+            .status{
+                padding   : 10px;
+                font-size : 1.5em;
+                color     : #ea7035;
+                height    : 60px;
+                width      : 50vw;
+            }
+            .gearing, .watts {
+                /* display    : inline-block; */
+                width      : 45%;
+                text-align : center;
+                font-size     : 3em;
+                color : rgba(255,255,255,0.8);
+            }
+            .gearing span{
+                padding-left  : 10px;
+                padding-right : 10px;
+            }
+            .disconnected{ background : #e73c7e; }
+            .connected   { background : #23d5ab; }
+            .old{
+                background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            }
+            .connecting{
+                background     : linear-gradient(-45deg, #e73c7e, #23d5ab);
+                background-size: 400% 400%;
+                animation      : gradient 5s ease infinite;
+            }
+            @keyframes gradient {
+                0%   { background-position: 0% 50%; }
+                50%  { background-position: 100% 50%; }
+                100% { background-position: 0% 50%; }
+            }
+            .brakes {
+                position   : relative;
+                width      : 100vw;
+                margin     : 0; padding : 0;
+            }
+            .brakes div{
+                height     : 20px;
+                /* border  : 1px solid white; */
+                color      : rgba(255,255,255,0.2);
+                text-align : center;
+                padding    : 5px;
+            }
+            .brakesOn {
+                background : orange;
+            }
+            .divider{
+                color      : rgba(255,255,255,0.2);
+            }
+            .watts:after{
+                content    :'w';
+                font-size  : 0.5em;
+                color      : rgba(255,255,255,0.2);
+            }
+            .row * {
+                /* border : 1px solid orange; */
+            }
+            .boxTest{
+                position  : absolute;
+                top       : 0px;
+                left      : 0px;
+                width     : 100vw;
+                height    : 180px;
+                background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="content">
+            <div class="btconnection row">
+                <button type="button" id="start"> Connect </button>
+                <div class="status"></div>
+            </div>
+            <div class="gearNpower row">
+                <span class="gearing">
+                    <span class="chainring">0</span>
+                    <span class="divider">&bull;</span>
+                    <span class="gearnumber">0</span>
+                </span>
+                <span class='watts'>0</span>
+            </div>
+            <div class="brakes row">
+                <div class="left"> left </div>
+                <div class="right"> right </div>
+            </div>
+        </div>
+        <script type="module" src="src/lib-ble.js" ></script>
+        <script type="module" src="src/sender.js" ></script>
+    </body>
+</html>
